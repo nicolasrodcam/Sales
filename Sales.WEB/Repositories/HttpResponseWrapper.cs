@@ -11,11 +11,12 @@ namespace Sales.WEB.Repositories
             HttpResponseMessage = httpResponseMessage;
         }
 
+        public T? Response { get; set; }
         public bool Error { get; set; }
         public HttpResponseMessage HttpResponseMessage { get; set;}
-        public T? Response { get; set;}
+        
 
-        public async Task<string?> GetErrorMessage()
+        public async Task<string?> GetErrorMessageAsync()
         {
             if (!Error)
             {
