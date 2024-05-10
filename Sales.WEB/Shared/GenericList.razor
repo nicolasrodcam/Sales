@@ -1,16 +1,12 @@
 ﻿@typeparam Titem
 
 
-
 @if (MyList is null)
 {
 
     @if (Loading is null)
     {
-        <div class="d-flex justify-content-center align-items-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT66Gra8ZLqw3hAN1fJ6sAu2fBXTSI_0dmDym5W6RKZ8GAvfZzjBGrXKYlgfg&s" />
-        </div>
-
+        <Loading />
     }
     else
     {

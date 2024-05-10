@@ -8,9 +8,6 @@
 </div>
 
 <GenericList MyList="Countries">
-    <Loading>
-        <p>Cargando...</p>
-    </Loading>
     <Body>
         <table class="table table-striped">
             <thead>
@@ -20,15 +17,15 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var contry in Countries!)
+                @foreach (var country in Countries!)
                 {
                     <tr>
                         <td>
-                            <a class="btn btn-warning" href="#">Editar</a>
-                            <button class="btn btn-danger">Borrar</button>
+                            <a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
+                            <button @onclick=@(() => @DeleteAsync(country)) class="btn btn-danger">Borrar</button>
                         </td>
                         <td>
-                            @contry.Name
+                            @country.Name
                         </td>
                     </tr>
                 }
@@ -38,4 +35,4 @@
 </GenericList>
 
 
-    
+
